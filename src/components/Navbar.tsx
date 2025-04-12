@@ -38,7 +38,6 @@ const Navbar = () => {
     { name: "Главная", href: "#home" },
     { name: "Наследование глаз", href: "#inheritance" },
     { name: "Статистика", href: "#statistics" },
-    { name: "О проекте", href: "#about" },
   ];
 
   return (
@@ -47,9 +46,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center">
             <Eye className="text-eye-purple w-6 h-6 mr-2" />
-            <span className="font-bold text-xl text-eye-purple">
-              Мир&nbsp;Глаз
-            </span>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl text-eye-purple">
+                Наследование глаз
+              </span>
+              <span className="text-xs text-muted-foreground">by mogcommunity</span>
+            </div>
           </a>
 
           {/* Desktop menu */}

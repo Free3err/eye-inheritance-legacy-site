@@ -31,20 +31,6 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-300">
-            <Button
-              size="lg"
-              className="bg-eye-purple hover:bg-eye-darkPurple text-white transition-all duration-300"
-            >
-              Узнать больше
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-eye-purple text-eye-purple hover:bg-eye-purple/10"
-            >
-              О проекте
-            </Button>
           </div>
         </div>
         

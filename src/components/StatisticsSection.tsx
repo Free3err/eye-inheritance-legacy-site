@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,10 +39,9 @@ const StatisticsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const eyeColorData = [
-    { name: "Карий", value: 55, color: "#7E69AB" },
-    { name: "Голубой", value: 25, color: "#33C3F0" },
-    { name: "Зеленый", value: 15, color: "#1EAEDB" },
-    { name: "Серый", value: 5, color: "#9b87f5" }
+    { name: "Карие", value: 51.1, color: "#7E69AB" },
+    { name: "Голубые", value: 26.7, color: "#33C3F0" },
+    { name: "Зеленые", value: 22.2, color: "#1EAEDB" }
   ];
 
   const onPieEnter = (_: any, index: number) => {
@@ -58,37 +56,31 @@ const StatisticsSection = () => {
     <section id="statistics" className="section-padding bg-eye-lightPurple/10">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Статистика цвета глаз в лицее</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Наследование цвета глаз</h2>
           <p className="text-lg text-muted-foreground">
-            Мы собрали данные о распространенности различных цветов глаз среди учащихся 
-            и представляем вам интересную статистику.
+            Мы собрали данные о распространенности различных цветов глаз среди учащихся
+            и их биологических родителей для изучения наследования этого признака.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <StatisticCard 
             icon={<Eye className="w-5 h-5 text-eye-purple" />}
-            title="Изучено учеников"
-            value={320}
-            description="Общее количество учеников, принявших участие в исследовании"
+            title="Изучено семей"
+            value={45}
+            description="Количество семей, принявших участие в исследовании"
           />
           <StatisticCard 
             icon={<BarChart3 className="w-5 h-5 text-eye-purple" />}
             title="Преобладающий цвет"
-            value="Карий"
-            description="Самый распространенный цвет глаз среди учеников лицея"
-          />
-          <StatisticCard 
-            icon={<Users className="w-5 h-5 text-eye-purple" />}
-            title="Редкий цвет"
-            value="Серый"
-            description="Наиболее редко встречающийся цвет глаз в нашем лицее"
+            value="51.1%"
+            description="Процент учащихся с карими глазами"
           />
           <StatisticCard 
             icon={<Percent className="w-5 h-5 text-eye-purple" />}
             title="Цветовое разнообразие"
-            value={4}
-            description="Количество различных цветов глаз, встречающихся среди учеников"
+            value={3}
+            description="Основные цвета глаз: карий, голубой и зеленый"
           />
         </div>
 
@@ -142,24 +134,21 @@ const StatisticsSection = () => {
             <h3 className="text-2xl font-semibold mb-4">Интересные факты о цвете глаз в нашем лицее</h3>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Региональные особенности:</span> Распределение 
-                цветов глаз в нашем лицее отражает генетические особенности населения нашего региона с преобладанием 
-                карих глаз.
+                <span className="font-semibold text-foreground">Наследование от родителей:</span> По результатам 
+                исследования, у 53.3% отцов и 37.8% матерей карие глаза, что коррелирует с высоким процентом 
+                карих глаз у детей (51.1%).
               </p>
               <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Гендерные различия:</span> Наше исследование 
-                не выявило значительных различий в распределении цветов глаз между мальчиками и девочками, что 
-                подтверждает отсутствие гендерной связи с этим признаком.
+                <span className="font-semibold text-foreground">Распределение цветов:</span> Среди учащихся 
+                преобладают карие глаза (51.1%), за ними следуют голубые (26.7%) и зеленые (22.2%).
               </p>
               <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Редкие сочетания:</span> У 2% 
-                учеников наблюдается гетерохромия — разный цвет глаз, что является редким генетическим 
-                явлением.
+                <span className="font-semibold text-foreground">Интересный факт:</span> У матерей наблюдается 
+                почти равное распределение между карими (37.8%), голубыми (31.1%) и зелеными (31.1%) глазами.
               </p>
               <p className="text-muted-foreground">
-                <span className="font-semibold text-foreground">Семейные связи:</span> В ходе исследования 
-                мы также собрали данные о цвете глаз родителей, что позволило проследить закономерности 
-                наследования этого признака в семьях.
+                <span className="font-semibold text-foreground">Генетические тенденции:</span> Данные показывают, 
+                что карий цвет глаз является доминантным признаком в исследуемой популяции.
               </p>
             </div>
           </div>
